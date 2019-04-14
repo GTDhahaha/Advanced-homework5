@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int type,num;
+	printf("Select input type (decimal=0, binary=1, hexadecimal=2)");
+	scanf("%d",&type);
+	
+	if (type==0)
+	{
+		printf("number(decimal) =");
+		scanf("%d",&num);	
+		char s[10];
+    	itoa(num, s, 2);
+		printf("binary = %s\n",s);
+		printf("octal = %o\n",num);
+		printf("hexadecimal = %x\n",num);
+	}
+	
+	else if (type==1)
+	{
+		char s[10];
+    	itoa(num, s, 2);
+		printf("number(binary) =");
+		scanf("%s",num);
+		printf("binary = %s\n",s);
+		printf("decimal = %d\n",s);
+		printf("octal = %o\n",s);
+		printf("hexadecimal = %x\n",s);
+	}
+	
+	else if (type==2)
+	{
+		printf("number(hexadecimal) =");
+		scanf("%x",&num);	
+		char s[10];
+    	itoa(num, s, 2);
+		printf("binary = %s\n",s);
+		printf("octal = %o\n",num);
+		printf("decimal = %d\n",num);
+	}
+		
+	
+	else
+	printf("ERROR\n");
+
+	system("pause");
+	return 0;
+}
